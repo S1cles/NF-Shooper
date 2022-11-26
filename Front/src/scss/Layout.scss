@@ -1,0 +1,35 @@
+// #B1E5F2 #272635
+
+.header_container {
+  background-color: #182223;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 5rem;
+  color: #91D7E8;
+  font-family: Tahoma, sans-serif;
+  opacity: 0.9;
+
+  nav {
+    margin-right: calc(1rem + 1vmin);
+  
+    
+    a {
+      font-size: calc(0.7rem + 1vmin);
+      margin-right: calc(3rem + 1vmin);
+    }
+  }
+  .logo_container {
+    .logo {
+      width: calc(10rem + 1vmin);
+      max-width: 80px;
+      height: auto;
+    }
+  }
+}
+.logo_text{
+  color: #14B1B4;
+}
+.search_item{
+  margin-left: 5rem !important;
+}

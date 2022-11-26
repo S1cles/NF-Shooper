@@ -1,0 +1,147 @@
+const data = {
+    products:[{
+        name: 'Nike Air Jordan 1',
+        slug: 'nike-air-jordan-1',
+        category:'boots',
+        image:'../img/naj1.png',
+        price: 500,
+        countInStoke:0,
+        brand:'Nike',
+        rating:5,
+        numReviews:10,
+        description:'The Air Jordan 1 Mid offers unique style, a touch of legend and unparalleled comfort on the court. The Air-Sole unit provides cushioning while you play, while the padded collar gives you a supportive feel.'
+    },
+    {
+        name: 'Nike Air Force 1',
+        slug: 'nike-air-force-1',
+        category:'boots',
+        image:'../img/naj2.png',
+        price: 200,
+        countInStoke:8,
+        brand:'Nike',
+        rating:4,
+        numReviews:15,
+        description:'You will score many important points in this legendary classic. This basketball reimagining features crisp white leather with subtle gold detailing, combining basketball comfort with off-court style. Hidden Air units and a durable 80s design give you the comfort you know and love.'
+    },
+    {
+        name: 'Nike shitboot',
+        slug: 'nike-shitboot',
+        category:'boots',
+        image:'../img/naj3.png',
+        price: 100,
+        countInStoke:4,
+        brand:'Nike',
+        rating:2,
+        numReviews:5,
+        description:'The Nike Air VaporMax 2021 FK is made with at least 40% recycled materials. It has an airy, comfortable design made of ultra-stretchy recycled Flyknit fabric (and a soft collar around the ankle). A sewn-on Swoosh and a recycled TPU heel pull add an alluring character as you roam the streets with the incredibly soft VaporMax cushioning.'
+    },
+    {
+        name: 'Staff pants',
+        slug: 'staf-pants',
+        category:'pants',
+        image:'../img/paj1.png',
+        price: 60,
+        countInStoke:3,
+        brand:'Staff',
+        rating:3,
+        numReviews:13,
+        description:'Shine your form on the pitch and look great off it in the Jordan Sport Dri-FIT Pants. Theyre made of soft, sweat-wicking fabric with a practical cut thats perfect for urban adventures. This product is made of at least 75% recycled polyester fibers.'
+    },
+    {
+        name: 'Nike Air Jordan 1',
+        slug: 'nike-air-jordan-1',
+        category:'boots',
+        image:'../img/naj1.png',
+        price: 500,
+        countInStoke:10,
+        brand:'Nike',
+        rating:5,
+        numReviews:10,
+        description:'The Air Jordan 1 Mid offers unique style, a touch of legend and unparalleled comfort on the court. The Air-Sole unit provides cushioning while you play, while the padded collar gives you a supportive feel.'
+    },
+    {
+        name: 'Nike Air Force 1',
+        slug: 'nike-air-force-1',
+        category:'boots',
+        image:'../img/naj2.png',
+        price: 200,
+        countInStoke:8,
+        brand:'Nike',
+        rating:4,
+        numReviews:15,
+        description:'You will score many important points in this legendary classic. This basketball reimagining features crisp white leather with subtle gold detailing, combining basketball comfort with off-court style. Hidden Air units and a durable 80s design give you the comfort you know and love.'
+    },
+    {
+        name: 'Nike shitboot',
+        slug: 'nike-shitboot',
+        category:'boots',
+        image:'../img/naj3.png',
+        price: 100,
+        countInStoke:4,
+        brand:'Nike',
+        rating:2,
+        numReviews:5,
+        description:'The Nike Air VaporMax 2021 FK is made with at least 40% recycled materials. It has an airy, comfortable design made of ultra-stretchy recycled Flyknit fabric (and a soft collar around the ankle). A sewn-on Swoosh and a recycled TPU heel pull add an alluring character as you roam the streets with the incredibly soft VaporMax cushioning.'
+    },
+    {
+        name: 'Staff pants',
+        slug: 'staf-pants',
+        category:'pants',
+        image:'../img/paj1.png',
+        price: 60,
+        countInStoke:3,
+        brand:'Staff',
+        rating:3,
+        numReviews:13,
+        description:'Shine your form on the pitch and look great off it in the Jordan Sport Dri-FIT Pants. Theyre made of soft, sweat-wicking fabric with a practical cut thats perfect for urban adventures. This product is made of at least 75% recycled polyester fibers.'
+    },{
+        name: 'Nike Air Jordan 1',
+        slug: 'nike-air-jordan-1',
+        category:'boots',
+        image:'../img/naj1.png',
+        price: 500,
+        countInStoke:10,
+        brand:'Nike',
+        rating:5,
+        numReviews:10,
+        description:'The Air Jordan 1 Mid offers unique style, a touch of legend and unparalleled comfort on the court. The Air-Sole unit provides cushioning while you play, while the padded collar gives you a supportive feel.'
+    },
+    {
+        name: 'Nike Air Force 1',
+        slug: 'nike-air-force-1',
+        category:'boots',
+        image:'../img/naj2.png',
+        price: 200,
+        countInStoke:8,
+        brand:'Nike',
+        rating:4,
+        numReviews:15,
+        description:'You will score many important points in this legendary classic. This basketball reimagining features crisp white leather with subtle gold detailing, combining basketball comfort with off-court style. Hidden Air units and a durable 80s design give you the comfort you know and love.'
+    },
+    {
+        name: 'Nike shitboot',
+        slug: 'nike-shitboot',
+        category:'boots',
+        image:'../img/naj3.png',
+        price: 100,
+        countInStoke:4,
+        brand:'Nike',
+        rating:2,
+        numReviews:5,
+        description:'The Nike Air VaporMax 2021 FK is made with at least 40% recycled materials. It has an airy, comfortable design made of ultra-stretchy recycled Flyknit fabric (and a soft collar around the ankle). A sewn-on Swoosh and a recycled TPU heel pull add an alluring character as you roam the streets with the incredibly soft VaporMax cushioning.'
+    },
+    {
+        name: 'Staff pants',
+        slug: 'staf-pants',
+        category:'pants',
+        image:'../img/paj1.png',
+        price: 60,
+        countInStoke:3,
+        brand:'Staff',
+        rating:3,
+        numReviews:13,
+        description:'Shine your form on the pitch and look great off it in the Jordan Sport Dri-FIT Pants. Theyre made of soft, sweat-wicking fabric with a practical cut thats perfect for urban adventures. This product is made of at least 75% recycled polyester fibers.'
+    },
+]
+}
+export default data;

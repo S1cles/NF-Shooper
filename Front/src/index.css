@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #102F35;
+  color: white;
+}
+h1{
+  color: transparent;
+}
+h1 {
+  font-size: calc(6rem + 1vmin);
+}
+h2 {
+  font-size: calc(4rem + 1vmin);
+}
+h3 {
+  font-size: calc(2rem + 1vmin);
+}
+h4 {
+  font-size: calc(1rem + 1vmin);
+}
+h5 {
+  font-size: calc(0.5rem + 1vmin);
+}
+h6 {
+  font-size: calc(0.25rem + 1vmin);
+}
+.content {
+ 
+}
+.bg{
+  background-image: url(../public/img/wave.png);
+ background-repeat: no-repeat;
+ background-position:bottom;
+ background-size: 100vw;
+} 
+.btn{
+  margin: 2rem !important;
+}

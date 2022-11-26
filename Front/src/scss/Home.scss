@@ -1,0 +1,27 @@
+
+.products{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+.product_item {
+  border: 8px solid white;
+  border-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><defs><linearGradient id='redgradient'><stop offset='0' stop-color='cadetblue'/><stop offset='0.362' stop-color='purple'/><stop offset='1' stop-color='darkcyan'/></linearGradient></defs><g id='Layer_1'><path d='M0,0 L50,0 L50,50 L0,50 L0,0 z' fill='url(%23redgradient)' width='100%' height='100%'/></g></svg>")
+    10% stretch;
+    margin: 1rem;
+    background-color: #21D8C2;
+    color: black;
+    color:darkcyan ;
+    img{
+        width: 100%;
+        max-width: 400px;
+        max-height: 300px ;
+        min-width: 300px;
+    }
+}
+.text-animation:hover{
+    color: #21D8C2;
+    cursor:default;
+    transition: all 1s ease-out;
+}
