@@ -12,13 +12,13 @@
 
   nav {
     margin-right: calc(1rem + 1vmin);
-  
     
     a {
       font-size: calc(0.7rem + 1vmin);
       margin-right: calc(3rem + 1vmin);
     }
   }
+
   .logo_container {
     .logo {
       width: calc(10rem + 1vmin);
@@ -32,4 +32,34 @@
 }
 .search_item{
   margin-left: 5rem !important;
+}
+
+
+.logo {
+  animation-name: logoanimationreverse ;
+  animation-duration: 1s;
+}
+.logo:hover{
+  animation-name: logoanimation ;
+  animation-duration: 1s;
+}
+@keyframes logoanimation {
+  from {
+      transform: rotate(0deg);
+      border-radius: 0px;
+  }
+  to {
+      border-radius: 100px;
+      transform: rotate(360deg);
+  }
+}
+@keyframes logoanimationreverse {
+  from {
+      border-radius: 100px;
+      transform: rotate(360deg);
+  }
+  to {
+      border-radius: 0px;
+      transform: rotate(0deg);
+  }
 }

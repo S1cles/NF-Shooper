@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import MyButton from "./../components/MyButton";
 import { Box } from "@mui/material";
+import Loader from '../components/Loader'
+import Message from '../components/Message'
 
 const Product = () => {
   const reducer = (state, action) => {
@@ -43,17 +45,17 @@ const Product = () => {
 
   console.log(product);
 
-  return loading ? (
-    <div>Loading...</div>
+  return ( loading ? (
+    <Loader/>
   ) : error ? (
-    <div>{error}</div>
+    <Message err = {error}/>
   ) : (
     <div>
       <h3 className="text-center">{product.name}</h3>
-      <div className="flex justify-around">
+      <div className="flex justify-center">
         <Box className="bg-gradient-to-r from-indigo-500 rounded-3xl ">
           <img
-            style={{ maxHeight: "780px", opacity: "1" }}
+            style={{ maxHeight: "780px", opacity: "1" , padding:'30px' }}
             src={product.image}
             alt={product.slug}
           />
@@ -76,7 +78,8 @@ const Product = () => {
         </Box>
       </div>
     </div>
-  );
+  )
+  )
 };
 
 export default Product;
