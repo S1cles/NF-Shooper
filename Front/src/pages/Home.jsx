@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect, useReducer, useContext } from "react";
 // import data from "../data/products.js";
 import axios from "axios";
 import "../scss/Home.scss";
@@ -7,21 +7,9 @@ import { Link } from "react-router-dom";
 import Search from "../components/Search";
 import logger from "use-reducer-logger";
 import { Rating } from "@mui/material";
-import Loader from '../components/Loader'
+import Loader from "../components/Loader";
 import Message from "../components/Message";
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "FETCH_REQUEST":
-      return { ...state, loading: true };
-    case "FETCH_SUCCESS":
-      return { ...state, products: action.payload, loading: false };
-    case "FETCH_FAIL":
-      return { ...state, loading: false, error: action.payload };
-    default:
-      return state;
-  }
-};
+import { Cart } from "../components/Cart";
 
 const Home = () => {
   const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
@@ -30,7 +18,31 @@ const Home = () => {
     error: "",
   });
 
+  const { state, dispatch: ctxDispatch } = useContext(Cart);
+  function addToCart() {
+    ctxDispatch({
+      type: "CART_ADD_ITEM",
+      payload: { ...products, quantity: 1 },
+    });
+  }
+  // const addCart =(product)=>{
+
+  //   dispatch({type: 'ADD_PRODUCT'})
+  // }
+
   // const [products, setProducts] = useState([]);
+  function reducer(state, action) {
+    switch (action.type) {
+      case "FETCH_REQUEST":
+        return { ...state, loading: true };
+      case "FETCH_SUCCESS":
+        return { ...state, products: action.payload, loading: false };
+      case "FETCH_FAIL":
+        return { ...state, loading: false, error: action.payload };
+      default:
+        return state;
+    }
+  }
   useEffect(() => {
     const fetch = async () => {
       dispatch({ type: "FETCH_REQUEST" });
@@ -52,14 +64,14 @@ const Home = () => {
       <div className="container">
         <div className=" flex justify-start items-center font-bold ">
           <h3 className="text-animation"> Our Products</h3>
-          <Search/>
+          <Search />
         </div>
 
         <div className="products flex">
           {loading ? (
-            <Loader/>
+            <Loader />
           ) : error ? (
-            <Message err = {error}/>
+            <Message err={error} />
           ) : (
             products.map((product, index) => (
               <div className="product_item" key={index}>
@@ -84,9 +96,7 @@ const Home = () => {
                   <p>
                     <strong>Price ${product.price}</strong>
                   </p>
-                    <MyButton>
-                      Add to cart
-                    </MyButton>
+                  <MyButton btn={addToCart}>Add to cart</MyButton>
                 </div>
               </div>
             ))

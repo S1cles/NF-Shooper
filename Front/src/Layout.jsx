@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import logo from "./logo.png";
 import "./scss/Layout.scss";
@@ -7,6 +7,7 @@ import LocalMallTwoToneIcon from "@mui/icons-material/LocalMallTwoTone";
 import AccountCircleTwoToneIcon from "@mui/icons-material/AccountCircleTwoTone";
 import SellTwoToneIcon from "@mui/icons-material/SellTwoTone";
 import Fab from "@mui/material/Fab";
+import { Cart } from "./components/Cart";
 
 
 // import SearchIcon from '@mui/material/Icon/Icon';
@@ -25,6 +26,10 @@ const Layout = () => {
     bottom: "50%",
     right: 16,
   };
+
+  
+  const { state } = useContext(Cart);
+  const {cart }= state
 
   return (
     <div className="bg">
@@ -53,6 +58,9 @@ const Layout = () => {
         <NavLink to="/cart">
           <Fab size="large" style={fabStyle} color="secondary" aria-label="add">
             <LocalMallTwoToneIcon sx={{ fontSize: 35 }} />
+          </Fab>
+          <Fab className="dn" size="small" style={{ color:'black',background:'#ff5858', position:"fixed",bottom: "45%",right: '25px', display: (cart.cartItems<1)? 'none' : 'block' }}  color="secondary" aria-label="add">
+            {cart.cartItems.length}
           </Fab>
         </NavLink>
       </div>

@@ -1,10 +1,13 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useContext, useEffect, useReducer } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import MyButton from "./../components/MyButton";
 import { Box } from "@mui/material";
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+import {Cart} from "../components/Cart";
+
+
 
 const Product = () => {
   const reducer = (state, action) => {
@@ -25,6 +28,13 @@ const Product = () => {
     loading: true,
     error: "",
   });
+  const { state, dispatch: ctxDispatch } = useContext(Cart);
+  function addToCart() {
+    ctxDispatch({
+      type: "CART_ADD_ITEM",
+      payload: { ...product, quantity: 1 },
+    });
+  }
 
   const params = useParams();
   const { slug } = params;
@@ -74,7 +84,7 @@ const Product = () => {
 
           <h4>Price: {product.price}$</h4>
 
-          <MyButton>Add to cart</MyButton>
+          <MyButton btn={addToCart}>Add to cart</MyButton>
         </Box>
       </div>
     </div>

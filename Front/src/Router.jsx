@@ -1,6 +1,6 @@
 import { Routes, Route, NavLink, Outlet } from "react-router-dom";
 import Layout from "./Layout.jsx";
-import Cart from "./pages/Cart.jsx";
+import Cart from "./pages/Cart";
 import Profile from "./pages/Profile.jsx";
 import Sellers from "./pages/Sellers.jsx";
 import Home from "./pages/Home";

@@ -4,7 +4,7 @@ import data from './data.js'
 const app = express()
 const port = process.env.PORT || 5001
 
-app.get('/api/products', (req, res) => { res.send(data.products) })
+app.get('/api/products', (req, res) => { res.send(data.products) })     
 //http://localhost:5001/api/products
 
 app.get(`/api/products/:slug`, (req, res) => {

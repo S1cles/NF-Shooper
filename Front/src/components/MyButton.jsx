@@ -9,6 +9,7 @@ const MyButton = (props) => {
     variant="contained"
     style={{ background: "purple" , width: '80%' }}
     className="btn"
+    onClick={props.btn}
   >
     {props.children}
   </Button>
