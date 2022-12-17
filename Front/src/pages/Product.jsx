@@ -5,7 +5,7 @@ import MyButton from "./../components/MyButton";
 import { Box } from "@mui/material";
 import Loader from '../components/Loader'
 import Message from '../components/Message'
-import {Cart} from "../components/Cart";
+import {Cart} from "../components/CartProvider";
 
 
 
@@ -29,10 +29,18 @@ const Product = () => {
     error: "",
   });
   const { state, dispatch: ctxDispatch } = useContext(Cart);
-  function addToCart() {
+  const {cart}= state
+  const addToCart = async()=> {
+    const existItem = cart.cartItems.find((x)=>x._id === product._id);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    const {data} = await axios.get(`/api/products/${product._id}`)
+    if ( data.countInStoke < quantity ){
+      window.alert('Sorry product out of stock')
+      return;
+    }
     ctxDispatch({
       type: "CART_ADD_ITEM",
-      payload: { ...product, quantity: 1 },
+      payload: { ...product, quantity },
     });
   }
 
@@ -88,7 +96,7 @@ const Product = () => {
         </Box>
       </div>
     </div>
-  )
+  ) 
   )
 };
 

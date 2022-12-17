@@ -9,7 +9,7 @@ import logger from "use-reducer-logger";
 import { Rating } from "@mui/material";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
-import { Cart } from "../components/Cart";
+import { Cart } from "../components/CartProvider";
 
 const Home = () => {
   const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {

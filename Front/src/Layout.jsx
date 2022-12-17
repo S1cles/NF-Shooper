@@ -7,7 +7,7 @@ import LocalMallTwoToneIcon from "@mui/icons-material/LocalMallTwoTone";
 import AccountCircleTwoToneIcon from "@mui/icons-material/AccountCircleTwoTone";
 import SellTwoToneIcon from "@mui/icons-material/SellTwoTone";
 import Fab from "@mui/material/Fab";
-import { Cart } from "./components/Cart";
+import { Cart } from "./components/CartProvider";
 
 
 // import SearchIcon from '@mui/material/Icon/Icon';
@@ -59,8 +59,8 @@ const Layout = () => {
           <Fab size="large" style={fabStyle} color="secondary" aria-label="add">
             <LocalMallTwoToneIcon sx={{ fontSize: 35 }} />
           </Fab>
-          <Fab className="dn" size="small" style={{ color:'black',background:'#ff5858', position:"fixed",bottom: "45%",right: '25px', display: (cart.cartItems<1)? 'none' : 'block' }}  color="secondary" aria-label="add">
-            {cart.cartItems.length}
+          <Fab className="dn" size="small" style={{ color:'black',background:'#ff5858', position:"fixed",bottom: "45%",right: '25px', display: (cart.cartItems<=0)? 'none' : 'block' }}  color="secondary" aria-label="add">
+            {cart.cartItems.reduce((a,c)=> a + c.quantity ,0)}
           </Fab>
         </NavLink>
       </div>

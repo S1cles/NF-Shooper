@@ -13,6 +13,13 @@ app.get(`/api/products/:slug`, (req, res) => {
     res.send(data.products)
 })
 
+
+app.get(`/api/products/:id`, (req, res) => {
+    const product = data.products.find(x => x._id === req.params.id)
+    product ? res.send(product) : res.status(404).send({ message: `Product ${product} doesn't exist` })
+    res.send(data.products)
+})
+
 app.listen(port, () => {
     console.log('server http://localhost:' + port)
 })

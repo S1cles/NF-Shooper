@@ -1,5 +1,6 @@
 const data = {
     products:[{
+        _id: '1',
         name: 'Nike Air Jordan 1',
         slug: 'nike-air-jordan-1',
         category:'boots',
@@ -12,6 +13,7 @@ const data = {
         description:'The Air Jordan 1 Mid offers unique style, a touch of legend and unparalleled comfort on the court. The Air-Sole unit provides cushioning while you play, while the padded collar gives you a supportive feel.'
     },
     {
+        _id: '2',
         name: 'Nike Air Force 1',
         slug: 'nike-air-force-1',
         category:'boots',
@@ -24,6 +26,7 @@ const data = {
         description:'You will score many important points in this legendary classic. This basketball reimagining features crisp white leather with subtle gold detailing, combining basketball comfort with off-court style. Hidden Air units and a durable 80s design give you the comfort you know and love.'
     },
     {
+        _id: '3',
         name: 'Nike shitboot',
         slug: 'nike-shitboot',
         category:'boots',
@@ -36,6 +39,7 @@ const data = {
         description:'The Nike Air VaporMax 2021 FK is made with at least 40% recycled materials. It has an airy, comfortable design made of ultra-stretchy recycled Flyknit fabric (and a soft collar around the ankle). A sewn-on Swoosh and a recycled TPU heel pull add an alluring character as you roam the streets with the incredibly soft VaporMax cushioning.'
     },
     {
+        _id: '4',
         name: 'Staff pants',
         slug: 'staf-pants',
         category:'pants',
@@ -47,7 +51,7 @@ const data = {
         numReviews:13,
         description:'Shine your form on the pitch and look great off it in the Jordan Sport Dri-FIT Pants. Theyre made of soft, sweat-wicking fabric with a practical cut thats perfect for urban adventures. This product is made of at least 75% recycled polyester fibers.'
     },
-    {
+    {        _id: '5',
         name: 'Nike Air Jordan 1',
         slug: 'nike-air-jordan-1',
         category:'boots',
@@ -60,6 +64,7 @@ const data = {
         description:'The Air Jordan 1 Mid offers unique style, a touch of legend and unparalleled comfort on the court. The Air-Sole unit provides cushioning while you play, while the padded collar gives you a supportive feel.'
     },
     {
+        _id: '6',
         name: 'Nike Air Force 1',
         slug: 'nike-air-force-1',
         category:'boots',
@@ -72,6 +77,7 @@ const data = {
         description:'You will score many important points in this legendary classic. This basketball reimagining features crisp white leather with subtle gold detailing, combining basketball comfort with off-court style. Hidden Air units and a durable 80s design give you the comfort you know and love.'
     },
     {
+        _id: '7',
         name: 'Nike shitboot',
         slug: 'nike-shitboot',
         category:'boots',
@@ -84,6 +90,7 @@ const data = {
         description:'The Nike Air VaporMax 2021 FK is made with at least 40% recycled materials. It has an airy, comfortable design made of ultra-stretchy recycled Flyknit fabric (and a soft collar around the ankle). A sewn-on Swoosh and a recycled TPU heel pull add an alluring character as you roam the streets with the incredibly soft VaporMax cushioning.'
     },
     {
+        _id: '8',
         name: 'Staff pants',
         slug: 'staf-pants',
         category:'pants',
@@ -95,6 +102,7 @@ const data = {
         numReviews:13,
         description:'Shine your form on the pitch and look great off it in the Jordan Sport Dri-FIT Pants. Theyre made of soft, sweat-wicking fabric with a practical cut thats perfect for urban adventures. This product is made of at least 75% recycled polyester fibers.'
     },{
+        _id: '9',
         name: 'Nike Air Jordan 1',
         slug: 'nike-air-jordan-1',
         category:'boots',
@@ -107,6 +115,7 @@ const data = {
         description:'The Air Jordan 1 Mid offers unique style, a touch of legend and unparalleled comfort on the court. The Air-Sole unit provides cushioning while you play, while the padded collar gives you a supportive feel.'
     },
     {
+        _id: '10',
         name: 'Nike Air Force 1',
         slug: 'nike-air-force-1',
         category:'boots',
@@ -119,6 +128,7 @@ const data = {
         description:'You will score many important points in this legendary classic. This basketball reimagining features crisp white leather with subtle gold detailing, combining basketball comfort with off-court style. Hidden Air units and a durable 80s design give you the comfort you know and love.'
     },
     {
+        _id: '11',
         name: 'Nike shitboot',
         slug: 'nike-shitboot',
         category:'boots',
@@ -131,6 +141,7 @@ const data = {
         description:'The Nike Air VaporMax 2021 FK is made with at least 40% recycled materials. It has an airy, comfortable design made of ultra-stretchy recycled Flyknit fabric (and a soft collar around the ankle). A sewn-on Swoosh and a recycled TPU heel pull add an alluring character as you roam the streets with the incredibly soft VaporMax cushioning.'
     },
     {
+        _id: '12',
         name: 'Staff pants',
         slug: 'staf-pants',
         category:'pants',
